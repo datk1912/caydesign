@@ -1,1 +1,33 @@
 <h1>Example App: Home</h1>
+<section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-9 text-center">
+            <h1>Welcome to Music And Chill</h1>
+                <h2>Login for a better experience</h2>
+            </div>
+        </div>
+            <div class="text-center">
+                <a href="/account/login" class="btn-login scrollto">Login</a>
+            </div>
+            {{/if}}
+
+        <div class="row icon-boxes">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-music-note-list"></i></div>
+                    <h4 class="title"><a href="/Playlist">Playlist</a></h4>
+                    <p class="description">Create your own playlist by adding your favorite songs</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-box">
+                    <div class="icon"><i class="bi bi-bar-chart"></i></div>
+                    <h4 class="title"><a href="/Song/hotSongs">Top songs</a></h4>
+                    <p class="description">The most popular songs right now</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Hero -->

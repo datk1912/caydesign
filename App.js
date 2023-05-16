@@ -3,9 +3,16 @@ import { engine } from 'express-handlebars';
 
 const app = express();
 
-app.engine('.hbs', engine({extname: '.hbs'}));
+app.use(express.static('public'));
+app.use(express.urlencoded({
+    extended: true
+}));
+
+app.engine('.hbs', engine({extname: '.hbs'})); // cấu hình view engine
 app.set('view engine', '.hbs');
 app.set('views', './views');
+
+// route
 
 app.get('/', (req, res) => {
     res.render('home');
@@ -22,6 +29,8 @@ app.get('/product', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('contact');
 });
+
+// kết nối localhost:3000
 
 app.listen((3000), function() {
     console.log("Sever listen to port 3000");
