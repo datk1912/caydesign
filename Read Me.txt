@@ -1,0 +1,5 @@
+- tạo 1 package.json ( thư mục cấu trúc của nodejs ) bằng cách npm init
+- install các framework như express, bootstrap, handlebar, ...
+- tạo file App.js để khởi chạy 
+- cấu hình view engine ( handlebar trong project này ) 
+- tạo file layouts/main.hbs 
