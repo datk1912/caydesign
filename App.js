@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.get('/about_us', (req, res) => {
-    res.render('about us');
+app.get('/about-us', (req, res) => {
+    res.render('about-us');
 });
 
 app.get('/product', (req, res) => {

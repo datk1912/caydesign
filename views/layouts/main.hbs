@@ -27,15 +27,28 @@
 
             <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="/">TRANG CHỦ</a></li>
-                <li><a class="nav-link scrollto" href="/">VỀ CHÚNG TÔI</a></li>
-                <li><a class="nav-link scrollto" href="/">SẢN PHẨM</a></li>
-                <li><a class="nav-link scrollto" href="/">LIÊN HỆ</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+                <li><a class="nav-link scrollto" href="/">TRANG CHỦ</a></li>
+                <li><a class="nav-link scrollto" href="/about-us">VỀ CHÚNG TÔI</a></li>
+                <li><a class="nav-link scrollto" href="/product">SẢN PHẨM</a></li>
+                <li><a class="nav-link scrollto" href="/contact">LIÊN HỆ</a></li>
+            </ul>
+            </nav>
         </div>
-    </header><!-- End Header -->
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            var currentPath = window.location.pathname;
+            var navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(function(link) {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 
 
     {{{body}}}
@@ -45,14 +58,21 @@
     <div class="footer-top">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 footer-info">
+            <div class="col-lg-5 col-md-6 row footer-info">
                 <h3>CÔNG TY TNHH MTV NỘI THẤT CAY</h3>
-                <p>Thiết kế và thi công:
-                    <br> 
-                    + Ngoại thất 
-                    <br> 
-                    + Nội Thất
-                </p>
+
+                    <div class="col-lg-4 col-md-6 footer-info image-wrapper">
+                        <img src="../imagine/logo.png" >
+                    </div>
+                    
+                    <div class="col-lg-7 col-md-6 footer-info">
+                        <p>Thiết kế và thi công:
+                            <br> 
+                            + Ngoại thất 
+                            <br> 
+                            + Nội Thất
+                        </p>
+                    </div>
             </div>
 
             <div class="col-lg-5 col-md-6 footer-contact">
@@ -68,6 +88,24 @@
 
             <div class="col-lg-2 col-md-6 footer-newsletter">
                 <h4>Mạng Xã Hội</h4>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <a href="https://www.facebook.com/CAYDesign.vn" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <a href="https://www.youtube.com/channel/UCHlhfcOI2djxEzeu9PZXkcw" target="_blank">
+                            <i href="/" class="fa fa-youtube-play"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <a href="https://www.instagram.com/_caydesign_/" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
                 
         </div>
     </div>

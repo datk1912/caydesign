@@ -274,6 +274,8 @@ h6 {
   }
 }
 
+
+
 /**
 * Mobile Navigation 
 */
@@ -564,7 +566,7 @@ margin-bottom: 30px;
 #footer .footer-top .footer-info h3 {
 font-size: 20px;
 color: #fff;
-margin: 0 0 10px 0;
+margin: 0 0 30px 0;
 padding: 2px 0 2px 0;
 line-height: 1;
 font-weight: 500;
@@ -624,13 +626,47 @@ font-size: 15px;
 }
 
 #footer .footer-newsletter h4 {
-font-size: 18px;
+font-size: 16px;
 font-weight: bold;
 color: #ffffff;
 position: relative;
-padding-bottom: 12px;
+padding: 0 0 12px 0;
+line-height: 1;
 
 }
 
+#footer .footer-newsletter i{
+  font-size: 17px;
 
+}
 
+.image-wrapper {
+  padding-left: 30px;
+}
+
+.fa {
+  padding: 6px;
+  width: 29px;
+  text-align: center;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-facebook{
+  background: #4267B2; 
+  color: #fff
+}
+
+.fa-instagram{
+  background: #f09433; 
+  color: #fff;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.fa-youtube-play{
+  background: #FF0000; 
+  color: #fff
+}
