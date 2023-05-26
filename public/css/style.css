@@ -1,7 +1,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #ffffff;
 }
 
 a {
@@ -66,8 +66,9 @@ h6 {
   color: #16507b;
 }
 
-#header .logo img {
-  max-height: 75px;
+#header img {
+  height: 150%;
+  width: 150%;
 }
 
 
@@ -280,7 +281,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #124265;
+  color: #c8c8c8;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -309,7 +310,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(10, 38, 58, 0.9);
+  background: rgba(83, 83, 83, 0.9);
   transition: 0.3s;
   z-index: 999;
 }
@@ -328,7 +329,7 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: #303030;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -337,13 +338,13 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #124265;
+  color: #c8c8c8;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #2487ce;
+  color: #dda756;
 }
 
 .navbar-mobile .login,
@@ -392,15 +393,14 @@ h6 {
   width: 100%;
   height: 800px;
   position: relative;
-  background: url("../imagine/hero-bg.jpg") top center;
+  background: url("../image/hero-bg.jpg") top center;
   background-size: cover;
-  position: relative;
 }
 
 #hero:before {
   content: "";
   position: absolute;
-  background: rgba(13, 13, 13, 0.8);
+  background: rgba(13, 13, 13, 0.7);
   bottom: 0;
   top: 0;
   left: 0;
@@ -408,16 +408,20 @@ h6 {
 }
 
 #hero .container {
-  padding-top: 80px;
+  padding-top: 0px;
+  padding-bottom: 30px;
 }
 
 #hero h1 {
   margin: 0;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 72px;
-  color: #124265;
-  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center; /* căn giữa theo chiều ngang */
+  align-items: center; /* căn giữa theo chiều dọc */
+  text-align: center; /* căn giữa văn bản*/
 }
 
 #hero h2 {
@@ -482,6 +486,23 @@ h6 {
   color: #2487ce;
 }
 
+#hero img{
+  height: 400px;
+  width: 100%;
+  max-width: 100%;
+}
+
+#hero figcaption{
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center; /* căn giữa theo chiều ngang */
+  text-align: center; /* căn giữa văn bản*/
+}
+
+.br
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -509,6 +530,7 @@ h6 {
     line-height: 24px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
