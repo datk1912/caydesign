@@ -43,3 +43,22 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+// gửi dữ liệu 
+
+function sendImg(title) {
+    fetch('/product', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ data: title.toString() })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Dữ liệu từ máy chủ:', data);
+    })
+    .catch(error => {
+        console.error('Lỗi khi gửi yêu cầu:', error);
+    });
+}

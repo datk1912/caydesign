@@ -2,17 +2,15 @@
     <h1> SẢN PHẨM </h1> 
     <hr>
     <div class="row image-list" align="center">
-        <div class="col image" align="center">
-            <img src="/image/newproject/c7.png">
-            <h2>Nhà ABC</h2>
-        </div>
-        <div class="col image" align="center">
-            <img src="/image/newproject/c7.png">
-            <h2>Nhà ABC</h2>
-        </div>
-        <div class="col image" align="center">
-            <img src="/image/newproject/c7.png">
-            <h2>Nhà ABC</h2>
-        </div>
+        {{#each title}}
+
+            <div class="col image" align="center">
+                <a onclick="sendImg('{{this}}')">
+                    <img src="/image/product/{{this}}.png" value="btcd">
+                    <h2>{{this}}</h2>
+                </a>
+            </div>
+
+        {{/each}}
     </div>
 </section>

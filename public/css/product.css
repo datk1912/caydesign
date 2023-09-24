@@ -1,5 +1,6 @@
 #product {
     color: #000;
+    background-color: #fbf6f2;
 }
 
 #product h1{
@@ -20,6 +21,7 @@
     margin: 0 auto;
     margin-top: 20px;
     width: 1200px;
+    
 }
 
 #product h2{
@@ -28,8 +30,16 @@
 }
 
 #product .image{
-    border: solid 1px #7f7f7f;
-    box-shadow: 2px 2px 5px #a6a6a6;
+    border: solid 1px #767676;
+    box-shadow: 1px 1px 5px #767676;
+    background-color: #fff;
+    cursor: pointer;
+    opacity: 1;
+	transition: .2s ease-in-out;
+}
+
+#product .image:hover{
+    opacity: .5;
 }
 
 #product .col{
@@ -39,10 +49,11 @@
 
 #product img{
     width: 100%;   
-    opacity: 1;
-	transition: .2s ease-in-out;
+    height: 250px;
 }
 
-#product img:hover{
-    opacity: .5;
+
+
+#product a{
+    color: #000;
 }

@@ -8,3 +8,6 @@
 nodejs
 - Sử dụng handlebar thay vì html thường vì để quản lý dữ liệu động
 - res.query.<tên biến>: lấy biến từ thanh url ( query )
+
+chi tiết sản phẩm 
+1. 
