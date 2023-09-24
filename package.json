@@ -1,12 +1,12 @@
 {
-  "type": "module",
+  "type":"module",
   "name": "caydesign",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "nodemon --inspect App.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "express-handlebars": "^7.0.7",
     "handlebar": "^1.0.0",
     "vendor": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

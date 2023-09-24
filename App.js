@@ -1,5 +1,7 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
+import { route } from './routes/index.js'
+
 
 const app = express();
 
@@ -14,21 +16,7 @@ app.set('views', './views');
 
 // route
 
-app.get('/', (req, res) => {
-    res.render('home');
-});
-
-app.get('/about-us', (req, res) => {
-    res.render('about-us');
-});
-
-app.get('/product', (req, res) => {
-    res.render('product');
-});
-
-app.get('/contact', (req, res) => {
-    res.render('contact');
-});
+route(app);
 
 // kết nối localhost:3000
 

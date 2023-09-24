@@ -37,12 +37,12 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: all 0.5s;
   background: #303030;
   z-index: 997;
   padding: 15px 0;
   /* border-bottom: 1px solid #7d7d7d; */
-  box-shadow: 0px 8px 15px rgba(128, 128, 128, 0.08)
+  box-shadow: 0px 8px 15px rgba(128, 128, 128, 0.08);
+  transition: top 0.5s;
 }
 
 #header.header-scrolled {
@@ -440,7 +440,6 @@ margin-bottom: 30px;
 #footer .footer-top .footer-info h3 {
 font-size: 20px;
 color: #fff;
-margin: 0 0 30px 0;
 padding: 2px 0 2px 0;
 line-height: 1;
 font-weight: 500;

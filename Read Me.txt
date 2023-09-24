@@ -3,3 +3,8 @@
 - tạo file App.js để khởi chạy 
 - cấu hình view engine ( handlebar trong project này ) 
 - tạo file layouts/main.hbs 
+
+
+nodejs
+- Sử dụng handlebar thay vì html thường vì để quản lý dữ liệu động
+- res.query.<tên biến>: lấy biến từ thanh url ( query )
