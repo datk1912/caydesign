@@ -52,8 +52,26 @@
     height: 250px;
 }
 
-
-
 #product a{
     color: #000;
+}
+
+/* ----------------------- */
+#product-detail .image{
+    margin: 20px;
+}
+
+#product-detail img{
+    height: 85vh;
+    box-shadow: 1px 1px 5px #464646;
+}
+
+#product-detail{
+    background: #fff;
+    color: #000;
+}
+
+#product-detail h1{
+    text-align: center;
+    margin-top: 10px;
 }

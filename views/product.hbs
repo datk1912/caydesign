@@ -4,13 +4,12 @@
     <div class="row image-list" align="center">
         {{#each title}}
 
-            <div class="col image" align="center">
-                <a onclick="sendImg('{{this}}')">
-                    <img src="/image/product/{{this}}.png" value="btcd">
-                    <h2>{{this}}</h2>
-                </a>
-            </div>
-
+                <div class="col image" align="center">
+                    <a href='./product/{{this}}' onclick="sendImg('{{this}}')">
+                        <img src="/image/product/{{this}}.png" value="btcd">
+                        <h2>{{this}}</h2>
+                    </a>
+                </div>
         {{/each}}
     </div>
 </section>
