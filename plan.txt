@@ -1,0 +1,13 @@
+--------------------------- BE
+làm sao để check đăng nhập
+form điền thông tin (done)
+tạo dữ liệu folder ( done )
+xóa folder hình ảnh ( tạo hàm xóa, nút xóa : onclick='xoa({{this}}' ) )
+lấy thống tin từ form liên hệ và gửi về ? ( (!)email, admin, ... )
+
+--------------------------- FE
+responsive 
+thiết kế về chúng tôi
+thiết kế trang chủ
+bố cục product
+bố cục product-detail

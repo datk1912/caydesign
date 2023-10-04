@@ -23,6 +23,10 @@ h6 {
   font-family: "Sofia", sans-serif;
 } */
 
+.form-control:focus{
+  box-shadow: none !important;
+  border: 1px solid #ccc !important;
+}
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices

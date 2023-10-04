@@ -1,7 +1,11 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
 import { route } from './routes/index.js'
-import fs from 'fs';
+import dotenv from 'dotenv';
+
+
+dotenv.config();
+global.pass = process.env.PASSWORD;
 
 const app = express();
 
@@ -19,9 +23,6 @@ app.set('views', './views');
 // route
 
 route(app);
-
-
-
 
 // kết nối localhost:3000
 

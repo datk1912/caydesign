@@ -1,3 +1,5 @@
+
+// điều hướng trong header menu
 document.addEventListener('DOMContentLoaded', function() {
 
     var currentPath = window.location.pathname;
@@ -18,20 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var image = document.getElementById("figcaption");
-    console.log(image);
-
-    image.addEventListener("mouseenter", function() {
-        image.style.transform = "scale(1.2)";
-    });
-
-    image.addEventListener("mouseleave", function() {
-        image.style.transform = "scale(1)";
-            
-    });
-});
-
 // lăn chuột mất header
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -44,21 +32,12 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-// gửi dữ liệu 
+// gửi dữ liệu dự án
+document.addEventListener('DOMContentLoaded', function() {
+    const submitButton = document.getElementById('submitProduct');
+    const myForm = document.getElementById('formProduct');
 
-function sendImg(title) {
-    fetch('/product', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ data: title.toString() })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Dữ liệu từ máy chủ:', data);
-    })
-    .catch(error => {
-        console.error('Lỗi khi gửi yêu cầu:', error);
+    submitButton.addEventListener('click', function() {
+        myForm.submit();
     });
-}
+});
