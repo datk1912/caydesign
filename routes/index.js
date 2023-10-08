@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs-extra';
 import formidable from 'formidable';
 
 function route(app){
@@ -53,12 +53,9 @@ function route(app){
         });
     })
 
-
-
     app.get('/contact', (req, res) => {
         res.render('contact');
     });
-
 
     app.get('/admin', (req, res) => {
         fs.readdir('./public/image/product', (err, files) => {    
@@ -78,8 +75,6 @@ function route(app){
 
         });
     });
-
-
 
     app.post('/admin', (req,res) => {
 
@@ -115,10 +110,15 @@ function route(app){
               });
 
         })
-
-        res.redirect('/admin');
     })
 
+    app.delete('/admin', (req,res) => {
+        const folderName = req.query.folderName;
+        console.log(folderName);
+        fs.remove(`./public/image/product/${folderName}`);
+        fs.remove(`./public/image/product/${folderName}.png`);
+
+    })
 }
 
 export { route };

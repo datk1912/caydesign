@@ -34,13 +34,36 @@
     box-shadow: 1px 1px 5px #767676;
     background-color: #fff;
     cursor: pointer;
+    position: relative;
+}
+
+#admin .image a{
     opacity: 1;
 	transition: .2s ease-in-out;
 }
 
-#admin .image:hover{
+#admin .image a:hover{
     opacity: .5;
 }
+
+#admin .image .close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    transition: .2s ease-in-out;
+    z-index: 1;
+    color: #e20000;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+#admin .image .close-button:hover{
+    opacity: 1;
+}
+
+
 
 #admin .col{
     padding: 0;

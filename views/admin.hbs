@@ -11,7 +11,10 @@
         </div>
 
         {{#each title}}
-                <div class="col image" align="center">
+                <div class="col image" align="center" >
+
+                   <i class="bi bi-dash-circle-fill close-button" onClick="DeleteProduct('{{this}}')"></i>
+                    
                     <a href='./product/{{this}}'>
                         <img src="/image/product/{{this}}.png">
                         <h2>{{this}}</h2>

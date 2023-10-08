@@ -41,3 +41,27 @@ document.addEventListener('DOMContentLoaded', function() {
         myForm.submit();
     });
 });
+
+// xóa 1 sản phẩm
+
+function DeleteProduct(folName){
+    const isConfirmed = confirm('Bạn có chắc chắn muốn xóa mục này?');
+    if (isConfirmed) {
+        const folderName = folName; 
+        fetch(`./admin?folderName=${folderName}`, {
+            method: 'DELETE',
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Xóa thành công');
+                return;
+            } else {
+                console.error('Xóa không thành công');
+            }
+        })
+        .catch(error => {
+            console.error('Lỗi:', error);
+        });
+    }
+    
+}
