@@ -19,6 +19,7 @@
     "fs-extra": "^11.1.1",
     "handlebar": "^1.0.0",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.6",
     "path": "^0.12.7",
     "vendor": "^1.7.0"
   },

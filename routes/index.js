@@ -1,5 +1,7 @@
 import fs from 'fs-extra';
 import formidable from 'formidable';
+import nodemailer from 'nodemailer';
+
 
 function route(app){
 
@@ -57,6 +59,38 @@ function route(app){
         res.render('contact');
     });
 
+    app.post('/contact', (req, res) => {
+        console.log(req.body);
+
+        // thiết lập gmail để gửi
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'caydesignform@gmail.com',
+              pass: 'uynp tsgt zkjy zfiv'
+            }
+          });
+
+        // thiết lập thông tin mail
+        var mailOptions = {
+            from: 'caydesignweb@gmail.com',
+            to: 'datk1912@gmail.com',
+            subject: 'Người dùng liên hệ!',
+            html: `<!DOCTYPE html><html><head><style>/* CSS cho email */body {font-family: Arial, sans-serif;background-color: #f4f4f4;padding: 20px;}.container {background-color: #fff;padding: 20px;border-radius: 5px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}h1 {color: #333;}p {color: #777;}</style></head><body><div class="container"><h1>Thông tin liên hệ</h1><p>Xin chào Admin,</p><p>Dưới đây là thông tin liên hệ từ một khách hàng:</p><ul><li><strong>Tên:</strong> ${req.body.ten}</li><li><strong>Email:</strong> ${req.body.email}</li><li><strong>Số điện thoại:</strong> ${req.body.sdt}</li><li><strong>Nội dung:</strong> ${req.body.noidung}</li></ul><p>Cảm ơn bạn đã quan tâm đến thông tin liên hệ. Hãy xem xét phản hồi khách hàng khi cần.</p></div></body></html>`
+        };
+
+        // gửi mail
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+
+        res.redirect('/contact');
+    })
+
     app.get('/admin', (req, res) => {
         fs.readdir('./public/image/product', (err, files) => {    
             if (err) {
@@ -109,15 +143,38 @@ function route(app){
                 fs.rename(file.filepath, newFilepath, err => err);
               });
 
+            res.redirect('./admin');
         })
     })
 
     app.delete('/admin', (req,res) => {
         const folderName = req.query.folderName;
-        console.log(folderName);
-        fs.remove(`./public/image/product/${folderName}`);
-        fs.remove(`./public/image/product/${folderName}.png`);
+        const folderPath = `./public/image/product/${folderName}`;
 
+        if (fs.existsSync(folderPath)) {
+            console.log('ok');
+            fs.readdir(folderPath, (err, files) => {
+
+                // Xóa từng tệp bên trong thư mục
+                files.forEach((file) => {
+              
+                    fs.unlink(`${folderPath}/${file}`, (err) => {
+                        if (err) {
+                            console.error('Lỗi khi xóa tệp:', err);
+                        } 
+                    });
+                });
+              
+                // Xóa thư mục sau khi xóa tất cả các tệp
+                fs.rmdir(folderPath, (err) => {
+                    if (err) {
+                    console.error('Lỗi khi xóa thư mục:', err);
+                    } 
+                });
+            });
+            // Xóa ảnh đại diện product
+            fs.unlink(`./public/image/product/${folderName}.png`);
+        }
     })
 }
 

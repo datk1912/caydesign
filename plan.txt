@@ -3,7 +3,7 @@ làm sao để check đăng nhập
 form điền thông tin (done)
 tạo dữ liệu folder ( done )
 xóa folder hình ảnh ( tạo hàm xóa, nút xóa : onclick='xoa({{this}}' ) ) (done)
-lấy thống tin từ form liên hệ và gửi về ? ( (!)email, admin, ... )
+lấy thống tin từ form liên hệ và gửi về ? ( (!)email, admin, ... ) (done)
 
 --------------------------- FE
 responsive 

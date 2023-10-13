@@ -22,22 +22,22 @@
         </div>
         <div class="col form">
             <h2></h2>
-            <form>
+            <form method="post" action="/contact"> 
                 <div class="mb-3">
                     <label for="ten" class="form-label">Họ tên</label>
-                    <input type="text" class="form-control" id="ten">
+                    <input type="text" class="form-control" id="ten" name="ten">
                 </div>
                 <div class="mb-3">
                     <label for="Email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="email" name="email" >
                 </div>
                 <div class="mb-3">
                     <label for="sdt" class="form-label">Số điện thoại</label>
-                    <input type="number" class="form-control" id="sdt">
+                    <input type="number" class="form-control" id="sdt" name="sdt">
                 </div>
                 <div class="mb-3">
                     <label for="noidung" class="form-label">Nội dung</label>
-                    <textarea type="text" class="form-control" id="noidung" rows="3"></textarea>
+                    <textarea type="text" class="form-control" id="noidung" name="noidung" rows="3"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
