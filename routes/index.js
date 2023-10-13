@@ -91,7 +91,34 @@ function route(app){
         res.redirect('/contact');
     })
 
+    
+
+    app.get('/login', (req,res) => {
+        if(req.session.isAuthenticated){
+            res.redirect('/admin');
+        }
+        else{
+        res.render('login');
+        }
+    })
+
+    app.post('/login', (req,res) => {
+        console.log(req.body);
+        if (req.body.username == process.env.USER && req.body.password == process.env.PASSWORD){
+            req.session.isAuthenticated = true;
+            res.redirect('/admin');
+        }
+        else{
+            res.redirect('/login');
+        }
+    })
+
     app.get('/admin', (req, res) => {
+        if (!req.session.isAuthenticated) {
+            res.redirect('/login');
+            return;
+        }
+
         fs.readdir('./public/image/product', (err, files) => {    
             if (err) {
                 console.error('Lỗi khi đọc thư mục:', err);
@@ -103,14 +130,20 @@ function route(app){
             })
 
             const data={
-                title: files
+                title: files,
+                isLogin: true
             }
             res.render('admin', data);
-
         });
+        
     });
 
     app.post('/admin', (req,res) => {
+
+        if (!req.session.isAuthenticated) {
+            res.redirect('/login');
+            return;
+        }
 
         const form = formidable({ multiples: true }); 
 
@@ -148,6 +181,10 @@ function route(app){
     })
 
     app.delete('/admin', (req,res) => {
+        if (!req.session.isAuthenticated) {
+            res.redirect('/login');
+        }
+
         const folderName = req.query.folderName;
         const folderPath = `./public/image/product/${folderName}`;
 

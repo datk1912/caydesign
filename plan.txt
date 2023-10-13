@@ -1,5 +1,5 @@
 --------------------------- BE
-làm sao để check đăng nhập
+làm sao để check đăng nhập (done)
 form điền thông tin (done)
 tạo dữ liệu folder ( done )
 xóa folder hình ảnh ( tạo hàm xóa, nút xóa : onclick='xoa({{this}}' ) ) (done)

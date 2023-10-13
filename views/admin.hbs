@@ -1,62 +1,67 @@
 <section id="admin">
-    <h1> SẢN PHẨM </h1> 
-    <hr>
+    {{#if isLogin}}
+        <h1> SẢN PHẨM </h1> 
+        <hr>
 
-    <div class="row image-list" align="center">
+        <div class="row image-list" align="center">
 
-        <div class="add" align="right">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add">
-                Thêm mới
-            </button>
+            <div class="add" align="right">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add">
+                    Thêm mới
+                </button>
+            </div>
+
+            {{#each title}}
+                    <div class="col image" align="center" >
+
+                    <i class="bi bi-dash-circle-fill close-button" onClick="DeleteProduct('{{this}}')"></i>
+                        
+                        <a href='./product/{{this}}'>
+                            <img src="/image/product/{{this}}.png">
+                            <h2>{{this}}</h2>
+                        </a>
+                    </div>
+            {{/each}}
         </div>
 
-        {{#each title}}
-                <div class="col image" align="center" >
+        {{!-- form tạo mới --}}
+        <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-lg modal-dialog-centered ">
+                <div class="modal-content">
 
-                   <i class="bi bi-dash-circle-fill close-button" onClick="DeleteProduct('{{this}}')"></i>
-                    
-                    <a href='./product/{{this}}'>
-                        <img src="/image/product/{{this}}.png">
-                        <h2>{{this}}</h2>
-                    </a>
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm mới Dự Án</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="/admin" method="post" id="formProduct" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="folderName" class="form-label">Tên Dự Án</label>
+                                <input type="text" class="form-control" id="folderName" name="folderName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="avatarimg" class="form-label">Chọn hình đại diện</label>
+                                <input class="form-control" type="file" accept="image/*" id="avatarimg" name="avatarimg">
+                            </div>
+                            <div class="mb-3">
+                                <label for="gallery" class="form-label">Chọn các hình ảnh</label>
+                                <input class="form-control" type="file" accept="image/*" id="gallery" name="gallery" multiple="multiple">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="button" class="btn btn-primary" id="submitProduct">Đăng</button>
+                    </div>
+
                 </div>
-        {{/each}}
-    </div>
-
-    {{!-- form tạo mới --}}
-    <div class="modal fade" id="add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-        <div class="modal-dialog modal-lg modal-dialog-centered ">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm mới Dự Án</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                    <form action="/admin" method="post" id="formProduct" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="folderName" class="form-label">Tên Dự Án</label>
-                            <input type="text" class="form-control" id="folderName" name="folderName">
-                        </div>
-                        <div class="mb-3">
-                            <label for="avatarimg" class="form-label">Chọn hình đại diện</label>
-                            <input class="form-control" type="file" accept="image/*" id="avatarimg" name="avatarimg">
-                        </div>
-                        <div class="mb-3">
-                            <label for="gallery" class="form-label">Chọn các hình ảnh</label>
-                            <input class="form-control" type="file" accept="image/*" id="gallery" name="gallery" multiple="multiple">
-                        </div>
-                    </form>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                    <button type="button" class="btn btn-primary" id="submitProduct">Đăng</button>
-                </div>
-
             </div>
         </div>
-    </div>
+
+    {{else}}
+        
+    {{/if}}
 
 </section>

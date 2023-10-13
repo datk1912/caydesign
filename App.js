@@ -2,7 +2,7 @@ import express from 'express';
 import { engine } from 'express-handlebars';
 import { route } from './routes/index.js'
 import dotenv from 'dotenv';
-
+import session from 'express-session';
 
 dotenv.config();
 global.pass = process.env.PASSWORD;
@@ -15,6 +15,17 @@ app.use(express.urlencoded({
 }));
 
 app.use(express.json());
+
+app.use(
+    session({
+      secret: 'KhAvInHdAt*#',
+      resave: false,
+      saveUninitialized: true,
+      cookie: {
+        maxAge: 60000, // Thời gian sống của session trong mili giây (đây là 1 giờ)
+      },
+    })
+  );
 
 app.engine('.hbs', engine({extname: '.hbs'})); // cấu hình view engine
 app.set('view engine', '.hbs');
