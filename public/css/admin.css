@@ -17,16 +17,20 @@
 
 }
 
-#admin .image-list{
-    margin: 0 auto;
-    margin-top: 20px;
-    width: 1200px;
-    
-}
-
 #admin h2{
     font-size: 18px;
     margin-top: 10px;
+}
+
+#admin .image-container{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 1200px;
+}
+
+#admin .image-list{
+    display: flex;
+    flex-wrap: wrap;   
 }
 
 #admin .image{
@@ -35,6 +39,8 @@
     background-color: #fff;
     cursor: pointer;
     position: relative;
+    width: 32%;
+    margin: 8px;
 }
 
 #admin .image a{

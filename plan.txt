@@ -9,5 +9,5 @@ lấy thống tin từ form liên hệ và gửi về ? ( (!)email, admin, ... )
 responsive 
 thiết kế về chúng tôi
 thiết kế trang chủ
-bố cục product
+bố cục product (done)
 bố cục product-detail

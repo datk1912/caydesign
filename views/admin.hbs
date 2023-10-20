@@ -3,16 +3,16 @@
         <h1> SẢN PHẨM </h1> 
         <hr>
 
-        <div class="row image-list" align="center">
+        <div class="image-container" align="center">
 
             <div class="add" align="right">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add">
                     Thêm mới
                 </button>
             </div>
-
-            {{#each title}}
-                    <div class="col image" align="center" >
+            <div class="image-list" align="center">
+                {{#each title}}
+                    <div class="image" align="center" >
 
                     <i class="bi bi-dash-circle-fill close-button" onClick="DeleteProduct('{{this}}')"></i>
                         
@@ -21,7 +21,8 @@
                             <h2>{{this}}</h2>
                         </a>
                     </div>
-            {{/each}}
+                {{/each}}
+            </div>
         </div>
 
         {{!-- form tạo mới --}}

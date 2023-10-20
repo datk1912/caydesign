@@ -21,6 +21,8 @@
     margin: 0 auto;
     margin-top: 20px;
     width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
     
 }
 
@@ -34,6 +36,8 @@
     box-shadow: 1px 1px 5px #767676;
     background-color: #fff;
     cursor: pointer;
+    width: 32%;
+    margin: 8px;
     opacity: 1;
 	transition: .2s ease-in-out;
 }

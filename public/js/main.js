@@ -65,3 +65,37 @@ function DeleteProduct(folName){
     }
     
 }
+
+
+// chuyển hình ảnh trong trang chủ
+
+var imgIndex = 1;
+
+document.addEventListener('DOMContentLoaded', function() {
+    showDivs(imgIndex);
+})
+
+function plusDivs(n) {
+  showDivs(imgIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("SpecialImg");
+
+  if (n > x.length) {imgIndex = 1}
+  if (n < 1) {imgIndex = x.length}
+
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[imgIndex-1].style.display = "block";  
+}
+
+// chỉnh tốc độ chuyển trang
+const myCarouselElement = document.querySelector('#SpecialImg')
+
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 100,
+  ride: true
+})

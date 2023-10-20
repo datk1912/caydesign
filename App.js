@@ -22,7 +22,7 @@ app.use(
       resave: false,
       saveUninitialized: true,
       cookie: {
-        maxAge: 60000, // Thời gian sống của session trong mili giây (đây là 1 giờ)
+        maxAge: 300000, 
       },
     })
   );

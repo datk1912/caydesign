@@ -189,28 +189,9 @@ function route(app){
         const folderPath = `./public/image/product/${folderName}`;
 
         if (fs.existsSync(folderPath)) {
-            console.log('ok');
-            fs.readdir(folderPath, (err, files) => {
-
-                // Xóa từng tệp bên trong thư mục
-                files.forEach((file) => {
-              
-                    fs.unlink(`${folderPath}/${file}`, (err) => {
-                        if (err) {
-                            console.error('Lỗi khi xóa tệp:', err);
-                        } 
-                    });
-                });
-              
-                // Xóa thư mục sau khi xóa tất cả các tệp
-                fs.rmdir(folderPath, (err) => {
-                    if (err) {
-                    console.error('Lỗi khi xóa thư mục:', err);
-                    } 
-                });
-            });
+            fs.remove(folderPath);
             // Xóa ảnh đại diện product
-            fs.unlink(`./public/image/product/${folderName}.png`);
+            fs.remove(`${folderPath}.png`);
         }
     })
 }

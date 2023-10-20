@@ -1,88 +1,181 @@
+/*   
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-height: 800px) {
+  #hero {
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  #hero {
+    height: auto;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+    line-height: 50px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+} */
+  
   /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
-  #hero {
-      width: 100%;
-      height: 800px;
-      position: relative;
-      background: url("../image/hero-bg.jpg") top center;
-      background-size: cover;
-      height: auto;
-    }
-    
-    #hero:before {
-      content: "";
-      position: absolute;
-      background: rgba(13, 13, 13, 0.6);
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      pointer-events: none;
-    }
-    
-    #hero .container {
-      padding-top: 0px;
-      padding-bottom: 30px;
-    }
-    
-    #hero h1 {
-      margin: 10px;
-      font-size: 50px;
-      font-weight: lighter;
-      position: relative;
-      color: #ffffff;
-      text-align: center; /* căn giữa văn bản*/
-    }
-    
-    #hero h2 {
-      color: #5e5e5e;
-      margin: 10px 0 0 0;
-      font-size: 22px;
-    }
-    
-    #hero .icon-boxes {
-      margin-top: 100px;
-    }
-    
-    @media (min-width: 1024px) {
-      #hero {
-        background-attachment: fixed;
-      }
-    }
-    
-    @media (max-height: 800px) {
-      #hero {
-        height: auto;
-      }
-    }
-    
-    @media (max-width: 992px) {
-      #hero {
-        height: auto;
-      }
-    
-      #hero h1 {
-        font-size: 28px;
-        line-height: 50px;
-      }
-    
-      #hero h2 {
-        font-size: 18px;
-        line-height: 24px;
-      }
-    }
-
-.carousel-inner img{
-  width: 90vw;
-  height: 90vh;
-
+@import url(https://fonts.googleapis.com/css?family=League%20Spartan:300);
+  
+#hero {
+  color: black;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "League Spartan", sans-serif;
+}
+#hero .background1{
+  width: 100vw;
+  height: 300px;
+  position: relative;
+  top: 0;
+  background-color: #ffffff;
 }
 
-.carousel-caption{
-  text-shadow: 1px 1px 3px #000000;   
+#hero .background2{
+  width: 100vw;
+  height: 300px;
+  position: relative;
+  top: 0;
+  background-color: #a3a3a3;
 }
-  .special-img img{
-      width: 100%;
-      height: 100%;
-    } 
+
+#hero .content{
+  background-color: #000;
+  width: 1150px;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  background: url("../image/hero-bg.jpg") center/cover;
+  box-shadow: 3px 3px 15px #242424;
+  display: flex;
+}
+
+#hero .content:before {
+  content: "";
+  position: absolute;
+  background: rgba(13, 13, 13, 0.5);
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+#hero .title{
+  color: #fff;
+  position: relative;
+  width: 450px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 45px;
+  padding: 30px;
+  line-height: 1;
+  margin-top: 30px;
+}
+
+#hero .title a{
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  border: solid 1px #fff;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+#hero .image{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 100%;
+  padding: 40px;
+}
+
+#hero .image .SpecialImg{
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#hero .image .next-btn{
+  position: absolute;
+  top: 48%;
+  right: 7%;
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 30px;
+  opacity: 30%;
+}
+
+#hero .image .prev-btn{
+  position: absolute;
+  top: 48%;
+  left: 7%;
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 30px;
+  opacity: 30%;
+}
+
+.carousel{
+  width: 700px;
+  height: 500px;
+  padding: 30px;
+}
+
+.carousel-inner{
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item{
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-indicators{
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.carousel-indicators [data-bs-target]{
+  width: 7px;
+  height: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+
+.carousel-inner > .carousel-item {
+  transition: 1.5s;
+}
