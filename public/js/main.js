@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// đổi thanh navbar trên đt
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.mobile-nav-toggle').addEventListener('click', function(e) {
         document.querySelector('#navbar').classList.toggle('navbar-mobile');
@@ -27,7 +28,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
   } else {
-    document.getElementById("header").style.top = "-80px";
+    document.getElementById("header").style.top = "-15vh";
   }
   prevScrollpos = currentScrollPos;
 }

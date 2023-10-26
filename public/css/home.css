@@ -43,24 +43,17 @@
 }
 #hero .background1{
   width: 100vw;
-  height: 300px;
+  height: 100vh;
   position: relative;
   top: 0;
   background-color: #ffffff;
 }
 
-#hero .background2{
-  width: 100vw;
-  height: 300px;
-  position: relative;
-  top: 0;
-  background-color: #a3a3a3;
-}
 
 #hero .content{
   background-color: #000;
-  width: 1150px;
-  height: 500px;
+  width: 93%;
+  height: 90%;
   position: absolute;
   z-index: 1;
   background: url("../image/hero-bg.jpg") center/cover;
@@ -82,26 +75,26 @@
 #hero .title{
   color: #fff;
   position: relative;
-  width: 450px;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 45px;
-  padding: 30px;
+  font-size: 3.5vw;
+  padding: 3%;
   line-height: 1;
-  margin-top: 30px;
+  margin-top: 1.75vw;
 }
 
 #hero .title a{
   color: #fff;
-  padding: 10px;
-  font-size: 20px;
+  padding: 1vw;
+  font-size: 1.5vw;
   border: solid 1px #fff;
-  border-radius: 20px;
-  margin-top: 30px;
+  border-radius: 1.5vw;
+  margin-top: 1.75vw;
 }
 
 #hero .image{
@@ -114,7 +107,7 @@
   padding: 40px;
 }
 
-#hero .image .SpecialImg{
+#hero .image #SpecialImg{
   width: 100%;
   height: 100%;
   display: none;
@@ -127,7 +120,7 @@
   background: none;
   padding: 0;
   border: none;
-  font-size: 30px;
+  font-size: 1.75vw;
   opacity: 30%;
 }
 
@@ -138,14 +131,14 @@
   background: none;
   padding: 0;
   border: none;
-  font-size: 30px;
+  font-size: 1.75vw;
   opacity: 30%;
 }
 
 .carousel{
-  width: 700px;
-  height: 500px;
-  padding: 30px;
+  width: 75%;
+  height: 100%;
+  padding: 1.75vw;
 }
 
 .carousel-inner{
@@ -178,4 +171,9 @@
 
 .carousel-inner > .carousel-item {
   transition: 1.5s;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  width: 1.75vw;
+  height: 1.75vw;
 }

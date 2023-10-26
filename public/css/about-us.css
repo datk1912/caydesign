@@ -1,0 +1,51 @@
+#aboutus{
+    color: #333333;
+    
+}
+
+#aboutus h1{
+    text-align: center;
+    margin: 1vw;
+    margin-top: 2vw;
+    font-size: 3vw;
+}
+
+#aboutus hr{
+    margin: 0 auto !important;
+    height: 1.5px;
+    background-color: #000;
+    opacity: 1;
+    width: 150px;
+}
+
+#aboutus .content{
+    margin: 1.5vh 4vw;
+    display: flex;
+    font-family: "League Spartan", sans-serif;
+}
+
+#aboutus h2{
+    text-align: center;
+    margin: 1vh 1vw;
+    margin-top: 3vh;
+    font-size: 2.5vw;
+}
+
+#aboutus .content .image{
+    display: flex;
+    flex-wrap: wrap;
+    width: 65vw;
+    margin-left: 2vw;
+}
+
+#aboutus .content .image img{
+    width: 45%;
+    margin: 0.75vw;
+    border: solid 0.15vw #000;
+}
+
+#aboutus .content .text{
+    margin-top: 10vh;
+    width: 35vw;
+    font-size: 2vw;
+}
