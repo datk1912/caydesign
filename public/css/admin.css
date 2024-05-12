@@ -5,8 +5,7 @@
 
 #admin h1{
     text-align: center;
-    margin: 1vw;
-    margin-top: 2vw;
+    margin: 0.5vw;
     font-size: 3vw;
 }
 
@@ -16,7 +15,11 @@
     background-color: #000;
     opacity: 1;
     width: 10vw;
+}
 
+#admin .modal-title{
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #admin h2{
