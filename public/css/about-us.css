@@ -5,9 +5,9 @@
 
 #aboutus h1{
     text-align: center;
-    margin: 1vw;
-    margin-top: 2vw;
-    font-size: 3vw;
+    margin: 10px;
+    margin-top: 30px;
+    font-size: 30px;
 }
 
 #aboutus hr{
@@ -19,33 +19,35 @@
 }
 
 #aboutus .content{
-    margin: 1.5vh 4vw;
+    margin: auto;
+    width: 80%;
     display: flex;
     font-family: "League Spartan", sans-serif;
 }
 
-#aboutus h2{
-    text-align: center;
-    margin: 1vh 1vw;
-    margin-top: 3vh;
-    font-size: 2.5vw;
+#aboutus .content .text{
+    margin-top: 70px;
+    width: 33%;
+    font-size: 30px;
 }
 
 #aboutus .content .image{
     display: flex;
     flex-wrap: wrap;
-    width: 65vw;
-    margin-left: 2vw;
+    width: 67%;
+    margin-left: 25px;
+}
+
+#aboutus h2{
+    text-align: center;
+    margin: 10px 15px;
+    margin-top: 3vh;
+    font-size: 50px;
 }
 
 #aboutus .content .image img{
-    width: 45%;
-    margin: 0.75vw;
-    border: solid 0.15vw #000;
+    width: 47%;
+    margin:10px;
+    border: solid 2.5px #000;
 }
 
-#aboutus .content .text{
-    margin-top: 10vh;
-    width: 35vw;
-    font-size: 2vw;
-}

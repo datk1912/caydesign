@@ -47,7 +47,7 @@ h6 {
 #header {
   background: #303030;
   z-index: 997;
-  padding: 1.5vh 0;
+  padding: 20px 0;
   /* border-bottom: 1px solid #7d7d7d; */
   box-shadow: 0px 8px 15px rgba(128, 128, 128, 0.08);
   transition: top 0.5s;
@@ -69,8 +69,8 @@ h6 {
 }
 
 #header .logo img{
-  width: 22vw;
-  margin-left: 5vw;
+  width: 320px;
+  margin-left: 70px;
 }
 
 #header .logo a {
@@ -163,7 +163,7 @@ h6 {
   display: flex;
   justify-content: right;
   align-items: center;
-  margin-right: 5vw;
+  margin-right: 70px;
 }
 
 .navbar {
@@ -183,18 +183,17 @@ h6 {
   position: relative;
 }
 
-.navbar a,
-.navbar a:focus {
+.navbar a {
   display: flex;
   justify-content: center;
-  text-align: center;
-  padding: 1.5vh 0 1.5vh 0;
-  font-size: 1vw;
+  align-items: center;
+  font-size: 18px;
   color: #c8c8c8;
   transition: 0.3s;
-  width: 10vw;
-  height: 6vh;
-  box-shadow: 1px 1px 1px #000;
+  width: 140px;
+  height: 45px;
+  margin: 0 5px;
+  box-shadow: 2px 2px 3px #000;
 }
 
 .navbar a i,
@@ -453,52 +452,47 @@ section {
 --------------------------------------------------------------*/
 #footer {
 color: #ffffff;
-font-size: 1vw;
+font-size: 15px;
 background: #f8fbfe;
 position : relative;
 box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
 }
 
 #footer {
-padding: 3vw;
+padding: 50px;
 background: #303030;
 }
 
 #footer br{
-  height: 1vh;
+  height: 10px;
 }
 
 #footer  .footer-info {
   margin-bottom: 30px;
-  margin-left: 1vw;
+  margin-left: 20px;
 }   
 
 #footer  .footer-info h3 {
-font-size: 1.5vw;
+font-size: 25px;
 color: #fff;
 padding: 2px 0 2px 0;
 line-height: 1;
 font-weight: 500;
-height: 1vh;
 }
 
 #footer  .footer-info p {
-font-size: 1vw;
-line-height: 4vh;
+font-size: 15px;
+line-height: 35px;
 margin-bottom: 0;
 color: #ffffff;
 }
 
 #footer  h4 {
-font-size: 1.3vw;
+font-size: 20px;
 font-weight: bold;
 color: #ffffff;
 position: relative;
 padding-bottom: 12px;
-}
-
-#footer  .footer-contact {
-margin-bottom: 30px;
 }
 
 #footer  .footer-contact ul {
@@ -531,7 +525,7 @@ color: #2487ce;
 
 
 #footer .footer-newsletter h4 {
-  font-size: 1.3vw;
+  font-size: 20px;
   font-weight: bold;
   color: #ffffff;
   position: relative;
@@ -541,7 +535,7 @@ color: #2487ce;
 }
 
 #footer .footer-newsletter i{
-  font-size: 1.2vw;
+  font-size: 18px;
   padding: 0;
 }
 
@@ -560,7 +554,7 @@ color: #2487ce;
 
 .fa {
   padding: 6px;
-  width: 2vw;
+  width: 25px;
   text-align: center;
   margin: 5px 2px;
   border-radius: 50%;

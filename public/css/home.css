@@ -42,8 +42,8 @@
   font-family: "League Spartan", sans-serif;
 }
 #hero .background1{
-  width: 100vw;
-  height: 100vh;
+  width: 1700px;
+  height: 850px;
   position: relative;
   top: 0;
   background-color: #ffffff;
@@ -52,8 +52,8 @@
 
 #hero .content{
   background-color: #000;
-  width: 93%;
-  height: 90%;
+  width: 1550px;
+  height: 750px;
   position: absolute;
   z-index: 1;
   background: url("../image/hero-bg.jpg") center/cover;
@@ -82,19 +82,26 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 3.5vw;
-  padding: 3%;
+  font-size: 60px;
+  padding: 5px;
   line-height: 1;
-  margin-top: 1.75vw;
+  margin-top: 40px;
 }
 
 #hero .title a{
   color: #fff;
-  padding: 1vw;
-  font-size: 1.5vw;
+  padding: 15px 20px;
+  font-size: 25px;
   border: solid 1px #fff;
-  border-radius: 1.5vw;
-  margin-top: 1.75vw;
+  border-radius: 25px;
+  margin-top: 35px;
+  transition: ease .3s;
+}
+
+#hero .title a:hover{
+  background: #fff;
+  color: #000;
+  transition: ease .3s;
 }
 
 #hero .image{
